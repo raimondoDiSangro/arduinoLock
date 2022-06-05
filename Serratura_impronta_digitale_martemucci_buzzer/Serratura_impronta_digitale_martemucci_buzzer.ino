@@ -81,7 +81,7 @@ uint8_t getFingerprintID() {
   uint8_t p = finger.getImage();
   switch (p) {
     case FINGERPRINT_OK:
-      Serial.println("Imagine dito acquisita");
+      Serial.println("Immagine dito acquisita");
       break;
     case FINGERPRINT_NOFINGER:
       Serial.println("Nessun impronta rilevata");
@@ -91,10 +91,10 @@ uint8_t getFingerprintID() {
       Serial.println("Errore di comunicazione");
       return p;
     case FINGERPRINT_IMAGEFAIL:
-      Serial.println("Imaging error");
+      Serial.println("Errore di imaging");
       return p;
     default:
-      Serial.println("Unknown error");
+      Serial.println("Errore sconosciuto");
       return p;
   }
 
@@ -109,7 +109,7 @@ uint8_t getFingerprintID() {
       Serial.println("Immagine troppo sfocata");
       return p;
     case FINGERPRINT_PACKETRECIEVEERR:
-      Serial.println("Communication error");
+      Serial.println("Errore di comunicazione");
       return p;
     case FINGERPRINT_FEATUREFAIL:
       Serial.println("Errore di acquisizione, riprovare");
@@ -118,7 +118,7 @@ uint8_t getFingerprintID() {
       Serial.println("Errore di acquisizione, riprovare");
       return p;
     default:
-      Serial.println("Unknown error");
+      Serial.println("Errore sconosciuto");
       return p;
   }
 
@@ -140,7 +140,7 @@ uint8_t getFingerprintID() {
 
     return p;
   } else {
-    Serial.println("Unknown error");
+    Serial.println("Errore sconosciuto");
     return p;
   }
 
